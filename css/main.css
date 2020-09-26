@@ -309,7 +309,7 @@ body {
 
 .atf:before {
   content: ' ';
-  background: url("../images/herobg.jpg") no-repeat;
+  background: url("../images/herobg1.jpg") no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -705,8 +705,6 @@ body {
 .home-book-form img {
   border-radius: 8px;
   position: relative;
-  top: -200px;
-  margin-bottom: -200px;
 }
 
 @media (max-width: 991px) {
@@ -813,6 +811,14 @@ body {
   }
 }
 
+.state-of-the-art img {
+  border-radius: 6px;
+}
+
+.state-of-the-art a {
+  margin-top: 20px;
+}
+
 .state-of-the-art h4 {
   font: 400 24px/38px 'Lato';
 }
@@ -825,7 +831,8 @@ body {
 
 .meet-doctors {
   background: #f9f9f9;
-  padding: 120px 0 50px;
+  padding: 20px 0 50px;
+  top: -50px;
 }
 
 @media (max-width: 767px) {
@@ -837,7 +844,7 @@ body {
 .meet-doctors h2 {
   font: Bold 48px/60px "Averta-Bold";
   letter-spacing: -1.92px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 767px) {
@@ -887,7 +894,7 @@ body {
 
 .doctors-slider {
   width: 100%;
-  margin-top: 150px;
+  margin-top: 80px;
   min-height: 500px;
   background: url("../images/sliderbg.svg") no-repeat;
   background-position: center !important;
@@ -3050,8 +3057,6 @@ footer .nav-menu .nav-item .nav-link {
   }
   .home-book-form img {
     border-radius: 0.42vw;
-    top: -10.42vw;
-    margin-bottom: -10.42vw;
   }
   .home-book-form .cbd-btn-primary {
     padding-left: 1.04vw;

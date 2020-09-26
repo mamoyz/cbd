@@ -282,7 +282,7 @@ $dark-blue: #015bea;
 	}
 	&:before {
 		content: ' ';
-		background: url('../images/herobg.jpg') no-repeat;
+		background: url('../images/herobg1.jpg') no-repeat;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -563,6 +563,7 @@ $dark-blue: #015bea;
 
 .home-book-form {
 	padding: 100px 0;
+	
 	p {
 		font: 400 24px/36px 'Lato';
 		@include mobile {
@@ -572,8 +573,8 @@ $dark-blue: #015bea;
 	img {
 		border-radius: 8px;
 		position: relative;
-		top: -200px;
-		margin-bottom: -200px;
+		// top: -200px;
+		// margin-bottom: -200px;
 		@include tablet {
 			position: static;
 			margin-bottom: 0;
@@ -648,6 +649,13 @@ $dark-blue: #015bea;
 			letter-spacing: -1px;
 		}
 	}
+	img {
+		border-radius: 6px;
+	}
+	a {
+		margin-top: 20px;
+		
+	}
 	h4 {
 		font: 400 24px/38px 'Lato';
 		@include mobile {
@@ -658,14 +666,15 @@ $dark-blue: #015bea;
 
 .meet-doctors {
 	background: #f9f9f9;
-	padding: 120px 0 50px;
+	padding: 20px 0 50px;
+	top: -50px;
 	@include mobile {
 		padding: 50px 0;
 	}
 	h2 {
 		font: Bold 48px/60px $font-bold;
 		letter-spacing: -1.92px;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		@include mobile {
 			font: Bold 36px/48px $font-bold;
 			letter-spacing: -1px;
@@ -700,7 +709,7 @@ $dark-blue: #015bea;
 }
 .doctors-slider {
 	width: 100%;
-	margin-top: 150px;
+	margin-top: 80px;
 	min-height: 500px;
 	background: url('../images/sliderbg.svg') no-repeat;
 	background-position: center !important;
