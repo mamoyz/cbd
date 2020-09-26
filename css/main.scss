@@ -198,7 +198,7 @@ $dark-blue: #015bea;
 				border-bottom-left-radius: 10px;
 				bottom: 1px;
 				padding: 20px;
-				min-width: 340px;
+				min-width: 25vw;
 				transform: translateY(calc(100% + 1px)) scaleY(0);
 				transition: all 0.3s;
 				transform-origin: top;
@@ -898,6 +898,9 @@ footer {
 	color: #ffffff;
 
 	padding: 60px 0 30px;
+	h5 {
+		font-size: 18px;
+	}
 	img {
 		max-width: 100%;
 	}
