@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Averta-Light';
+  font-family: "Averta-Light";
   src: url("../fonts/Averta-Light.eot");
   src: url("../fonts/Averta-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Light.svg#Averta-Light") format("svg"), url("../fonts/Averta-Light.ttf") format("truetype"), url("../fonts/Averta-Light.woff") format("woff"), url("../fonts/Averta-Light.woff2") format("woff2");
   font-weight: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'Averta-Semibold';
+  font-family: "Averta-Semibold";
   src: url("../fonts/Averta-Semibold.eot");
   src: url("../fonts/Averta-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Semibold.svg#Averta-Semibold") format("svg"), url("../fonts/Averta-Semibold.ttf") format("truetype"), url("../fonts/Averta-Semibold.woff") format("woff"), url("../fonts/Averta-Semibold.woff2") format("woff2");
   font-weight: normal;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: 'Averta-Regular';
+  font-family: "Averta-Regular";
   src: url("../fonts/Averta-Regular.eot");
   src: url("../fonts/Averta-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Regular.svg#Averta-Regular") format("svg"), url("../fonts/Averta-Regular.ttf") format("truetype"), url("../fonts/Averta-Regular.woff") format("woff"), url("../fonts/Averta-Regular.woff2") format("woff2");
   font-weight: normal;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'Averta-Bold';
+  font-family: "Averta-Bold";
   src: url("../fonts/Averta-Bold.eot");
   src: url("../fonts/Averta-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Bold.svg#Averta-Bold") format("svg"), url("../fonts/Averta-Bold.ttf") format("truetype"), url("../fonts/Averta-Bold.woff") format("woff"), url("../fonts/Averta-Bold.woff2") format("woff2");
   font-weight: normal;
@@ -31,7 +31,7 @@
 }
 
 body {
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 @media (min-width: 1200px) and (max-width: 1920px) {
@@ -88,6 +88,13 @@ body {
 
 .header .navbar {
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  .header .navbar ul {
+    max-height: calc(100vh - 80px);
+    overflow: scroll;
+  }
 }
 
 @media (max-width: 991px) {
@@ -171,7 +178,7 @@ body {
   z-index: 1000;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header .nav-item .sub-menu {
     border-left: 2px solid #01c5f9;
   }
@@ -194,7 +201,7 @@ body {
   color: #01c5f9;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header .nav-item .sub-menu {
     padding-left: 0;
     position: absolute;
@@ -230,7 +237,7 @@ body {
   }
 }
 
-@media (min-width: 768px) and (min-width: 992px) and (max-width: 1919px) {
+@media (min-width: 992px) and (min-width: 992px) and (max-width: 1919px) {
   .header .nav-item .sub-menu a {
     font: 400 0.94vw/1.25vw "Averta-Semibold";
     letter-spacing: -0.04vw;
@@ -238,7 +245,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header .nav-item.has-children:hover .sub-menu {
     opacity: 1;
     -webkit-transform: translateY(calc(100% + 1px)) scaleY(1);
@@ -308,7 +315,7 @@ body {
 }
 
 .atf:before {
-  content: ' ';
+  content: " ";
   background: url("../images/herobg1.jpg") no-repeat;
   position: absolute;
   top: 0;
@@ -321,8 +328,15 @@ body {
           animation: 2s fadeIn 0s forwards;
 }
 
+@media (max-width: 767px) {
+  .atf:before {
+    background: url("../images/herobg1-mobile.jpg") no-repeat;
+    background-position: center;
+  }
+}
+
 .atf:after {
-  content: ' ';
+  content: " ";
   background: transparent linear-gradient(137deg, #ffffff 0%, #ffffff00 100%) 0% 0% no-repeat padding-box;
   position: absolute;
   top: 0;
@@ -520,7 +534,7 @@ body {
 }
 
 .about .intro .intro-img:before {
-  content: ' ';
+  content: " ";
   background: #fff;
   position: absolute;
   top: -80px;
@@ -548,14 +562,14 @@ body {
 
 .about .intro p {
   margin: 35px 0;
-  font: 400 24px/38px 'Lato';
+  font: 400 24px/38px "Lato";
   color: #242424;
 }
 
 @media (max-width: 767px) {
   .about .intro p {
     margin: 15px 0;
-    font: 400 18px/28px 'Lato';
+    font: 400 18px/28px "Lato";
   }
 }
 
@@ -662,7 +676,7 @@ body {
 }
 
 .about .conditions-treated .condition-item h3:before {
-  content: ' ';
+  content: " ";
   width: 36px;
   height: 18px;
   background: url("../images/condition-bullet.svg") no-repeat;
@@ -675,12 +689,12 @@ body {
 }
 
 .about .conditions-treated .condition-item p {
-  font: 400 18px/26px 'Lato';
+  font: 400 18px/26px "Lato";
   color: #ffffff;
 }
 
 .about .conditions-treated .condition-item p a {
-  font: bold 14px/26px 'Lato';
+  font: bold 14px/26px "Lato";
   display: block;
   color: #fff;
   text-transform: uppercase;
@@ -693,12 +707,12 @@ body {
 }
 
 .home-book-form p {
-  font: 400 24px/36px 'Lato';
+  font: 400 24px/36px "Lato";
 }
 
 @media (max-width: 767px) {
   .home-book-form p {
-    font: 400 18px/28px 'Lato';
+    font: 400 18px/28px "Lato";
   }
 }
 
@@ -775,12 +789,12 @@ body {
 }
 
 .home-why-choose p {
-  font: 400 20px/34px 'Lato';
+  font: 400 20px/34px "Lato";
 }
 
 @media (max-width: 767px) {
   .home-why-choose p {
-    font: 400 18px/32px 'Lato';
+    font: 400 18px/32px "Lato";
   }
 }
 
@@ -820,12 +834,12 @@ body {
 }
 
 .state-of-the-art h4 {
-  font: 400 24px/38px 'Lato';
+  font: 400 24px/38px "Lato";
 }
 
 @media (max-width: 767px) {
   .state-of-the-art h4 {
-    font: 400 18px/32px 'Lato';
+    font: 400 18px/32px "Lato";
   }
 }
 
@@ -855,12 +869,12 @@ body {
 }
 
 .meet-doctors h4 {
-  font: 400 24px/38px 'Lato';
+  font: 400 24px/38px "Lato";
 }
 
 @media (max-width: 767px) {
   .meet-doctors h4 {
-    font: 400 18px/32px 'Lato';
+    font: 400 18px/32px "Lato";
   }
 }
 
@@ -994,14 +1008,14 @@ body {
 }
 
 .doctors-slider .slider-item .doctor-info p {
-  font: 400 18px/28px 'Lato';
+  font: 400 18px/28px "Lato";
   color: #242424;
   margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
   .doctors-slider .slider-item .doctor-info p {
-    font: 400 18px/28px 'Lato';
+    font: 400 18px/28px "Lato";
   }
 }
 
@@ -1119,12 +1133,12 @@ body {
 
 .testimonials h4 {
   margin: 40px 0;
-  font: 400 20px/34px 'Lato';
+  font: 400 20px/34px "Lato";
 }
 
 @media (max-width: 767px) {
   .testimonials h4 {
-    font: 400 18px/32px 'Lato';
+    font: 400 18px/32px "Lato";
     margin: 25px 0;
   }
 }
@@ -1158,6 +1172,10 @@ footer img {
   max-width: 100%;
 }
 
+footer .footer-logo {
+  max-width: 70%;
+}
+
 footer .footer-contact {
   margin-top: 30px;
 }
@@ -1167,10 +1185,6 @@ footer .footer-contact p {
   letter-spacing: -0.19px;
   color: #ffffff;
   margin-bottom: 0;
-}
-
-footer .footer-copyright {
-  margin-top: 80px;
 }
 
 @media (max-width: 991px) {
@@ -1263,7 +1277,7 @@ footer .nav-menu .nav-item .nav-link {
 .page-content {
   background: #fff;
   padding: 100px 0;
-  font: 400 24px/38px 'Lato';
+  font: 400 24px/38px "Lato";
 }
 
 @media (max-width: 991px) {
@@ -1274,7 +1288,7 @@ footer .nav-menu .nav-item .nav-link {
 
 @media (max-width: 767px) {
   .page-content {
-    font: 400 18px/28px 'Lato';
+    font: 400 18px/28px "Lato";
   }
 }
 
@@ -1297,12 +1311,12 @@ footer .nav-menu .nav-item .nav-link {
 }
 
 .page-content p {
-  font: 400 24px/38px 'Lato';
+  font: 400 24px/38px "Lato";
 }
 
 @media (max-width: 767px) {
   .page-content p {
-    font: 400 18px/28px 'Lato';
+    font: 400 18px/28px "Lato";
   }
 }
 
@@ -1707,14 +1721,6 @@ footer .nav-menu .nav-item .nav-link {
   }
   .about-us-atf .about-header-about {
     font: 400 1.04vw/2.08vw "Lato";
-  }
-  .about-us-atf .about-atf-img img {
-    width: 50%;
-  }
-  .about-us-atf .about-atf-img img:nth-child(1) {
-    position: relative;
-    top: -2.6vw;
-    right: -2.6vw;
   }
   .meet-surgeons {
     padding: 5.21vw 0 6.51vw;
@@ -2887,7 +2893,7 @@ footer .nav-menu .nav-item .nav-link {
     min-height: calc(100vh + 15.63vw);
   }
   .atf:before {
-    content: ' ';
+    content: " ";
     background: url("../images/herobg.jpg") no-repeat;
     position: absolute;
     top: 0;
@@ -2898,7 +2904,7 @@ footer .nav-menu .nav-item .nav-link {
     background-size: cover;
   }
   .atf:after {
-    content: ' ';
+    content: " ";
     background: transparent linear-gradient(137deg, #ffffff 0%, #ffffff00 100%) 0% 0% no-repeat padding-box;
     position: absolute;
     top: 0;
@@ -2994,7 +3000,7 @@ footer .nav-menu .nav-item .nav-link {
     letter-spacing: -0.1vw;
   }
   .about .intro .intro-img:before {
-    content: ' ';
+    content: " ";
     background: #fff;
     position: absolute;
     top: -4.17vw;
@@ -3014,7 +3020,7 @@ footer .nav-menu .nav-item .nav-link {
   }
   .about .intro p {
     margin: 1.82vw 0;
-    font: 400 1.25vw/1.98vw 'Lato';
+    font: 400 1.25vw/1.98vw "Lato";
     color: #242424;
   }
   .about .conditions-treated h2 {
@@ -3036,7 +3042,7 @@ footer .nav-menu .nav-item .nav-link {
     padding-left: 2.6vw;
   }
   .about .conditions-treated .condition-item h3:before {
-    content: ' ';
+    content: " ";
     width: 1.88vw;
     height: 0.94vw;
     background: url("../images/condition-bullet.svg") no-repeat;
@@ -3048,11 +3054,11 @@ footer .nav-menu .nav-item .nav-link {
     left: 0;
   }
   .about .conditions-treated .condition-item p {
-    font: 400 0.94vw/1.35vw 'Lato';
+    font: 400 0.94vw/1.35vw "Lato";
     color: #ffffff;
   }
   .about .conditions-treated .condition-item p a {
-    font: bold 0.73vw/1.35vw 'Lato';
+    font: bold 0.73vw/1.35vw "Lato";
     display: block;
     color: #fff;
     text-transform: uppercase;
@@ -3063,7 +3069,7 @@ footer .nav-menu .nav-item .nav-link {
     padding: 5.21vw 0;
   }
   .home-book-form p {
-    font: 400 1.25vw/1.88vw 'Lato';
+    font: 400 1.25vw/1.88vw "Lato";
   }
   .home-book-form img {
     border-radius: 0.42vw;
@@ -3094,7 +3100,7 @@ footer .nav-menu .nav-item .nav-link {
     font: Bold 1.67vw/2.5vw "Averta-Bold";
   }
   .home-why-choose p {
-    font: 400 1.04vw/1.77vw 'Lato';
+    font: 400 1.04vw/1.77vw "Lato";
   }
   .home-why-choose img {
     border-radius: 0.42vw;
@@ -3108,7 +3114,7 @@ footer .nav-menu .nav-item .nav-link {
     margin-bottom: 1.56vw;
   }
   .state-of-the-art h4 {
-    font: 400 1.25vw/1.98vw 'Lato';
+    font: 400 1.25vw/1.98vw "Lato";
   }
   .meet-doctors {
     background: #f9f9f9;
@@ -3120,7 +3126,7 @@ footer .nav-menu .nav-item .nav-link {
     margin-bottom: 1.56vw;
   }
   .meet-doctors h4 {
-    font: 400 1.25vw/1.98vw 'Lato';
+    font: 400 1.25vw/1.98vw "Lato";
   }
   .meet-doctors .slider-prev {
     width: 2.6vw;
@@ -3185,7 +3191,7 @@ footer .nav-menu .nav-item .nav-link {
     margin-bottom: 0.52vw;
   }
   .doctors-slider .slider-item .doctor-info p {
-    font: 400 0.9vw/1.4vw 'Lato';
+    font: 400 0.9vw/1.4vw "Lato";
     color: #242424;
   }
   .doctors-slider .slider-item .doctor-info a {
@@ -3260,7 +3266,7 @@ footer .nav-menu .nav-item .nav-link {
   }
   .testimonials h4 {
     margin: 2.08vw 0;
-    font: 400 1.04vw/1.77vw 'Lato';
+    font: 400 1.04vw/1.77vw "Lato";
   }
   .testimonials .btn-call {
     margin-top: 1.04vw;
@@ -3274,6 +3280,9 @@ footer .nav-menu .nav-item .nav-link {
     color: #ffffff;
     padding: 3.13vw 0 1.56vw;
   }
+  footer p {
+    font: 400 0.83vw/1.35vw "Averta-Regular";
+  }
   footer .footer-contact {
     margin-top: 1.56vw;
   }
@@ -3282,9 +3291,6 @@ footer .nav-menu .nav-item .nav-link {
     letter-spacing: -0.01vw;
     color: #ffffff;
     margin-bottom: 0;
-  }
-  footer .footer-copyright {
-    margin-top: 4.17vw;
   }
   footer .footer-copyright p {
     color: #ffffff;
@@ -3320,7 +3326,7 @@ footer .nav-menu .nav-item .nav-link {
   }
   .page-content {
     padding: 5.21vw 0;
-    font: 400 1.25vw/1.98vw 'Lato';
+    font: 400 1.25vw/1.98vw "Lato";
   }
   .page-content h2 {
     font: bold 2.5vw/2.92vw "Averta-Bold";
@@ -3331,7 +3337,7 @@ footer .nav-menu .nav-item .nav-link {
     letter-spacing: -0.05vw;
   }
   .page-content p {
-    font: 400 1.25vw/1.98vw 'Lato';
+    font: 400 1.25vw/1.98vw "Lato";
   }
 }
 /*# sourceMappingURL=main.css.map */

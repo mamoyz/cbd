@@ -309,18 +309,6 @@
     .about-header-about {
       font: 400 1.04vw/2.08vw "Lato";
     }
-    .about-atf-img {
-      img {
-        width: 50%;
-        &:nth-child(1) {
-          position: relative;
-          top: -2.6vw;
-          right: -2.6vw;
-        }
-        &:nth-child(2) {
-        }
-      }
-    }
   }
   .meet-surgeons {
     padding: 5.21vw 0 6.51vw;

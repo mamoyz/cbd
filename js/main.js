@@ -1,8 +1,8 @@
 Vue.component("nav-bar", {
   template: `
   <nav class="navbar navbar-expand-lg w-100">
-                    <a class="navbar-brand" href="#">
-                        <img src="images/logo.svg" alt="Sydney CBD Eye Clinic">
+                    <a class="navbar-brand" href="/">
+                        <img src="/images/logo.svg" alt="Sydney CBD Eye Clinic">
                     </a>
 
 
@@ -35,7 +35,7 @@ Vue.component("nav-bar", {
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavId">
                         <ul class="navbar-nav  mt-2 mt-lg-0">
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="/">Home </a>
                             </li>
                             <!-- <li class="nav-item">
@@ -115,6 +115,120 @@ Vue.component("nav-bar", {
                         </ul>
                     </div>
                 </nav>
+  `,
+});
+Vue.component("footer-dynamic", {
+  template: `
+  <footer>
+            <div class="container-fluid px-lg-5">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href="#"><img class="footer-logo" src="../images/footer-logo.svg" alt=""></a> 
+                        <p class="mt-3  pr-4">Sydney CBD Eye clinic was founded by Dr Dennis Lowe – an experienced Ophthalmic surgeon and neurologist with a vision to provide access to exceptional eye care with a holistic approach.
+                        </p>                   
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-2">
+                                <h5>
+                                    QUICK LINKS
+                                </h5>
+                                <ul class="nav-menu list-unstyled">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/about">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/attending-your-surgery">Attending Your Surgery</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/clinic-consultation" ref="#">Clinic Consultation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/eye-conditions.html" ref="#">Eye Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <h5>
+                                    ABOUT US
+                                </h5>
+                                <ul class="nav-menu list-unstyled">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/our-equipment-and-technology">The Practice</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/procedures">Our Doctors</a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-lg-2">
+                                <h5>
+                                    PROCEDURES
+                                </h5>
+                                <ul class="nav-menu list-unstyled">
+                                    <li class="nav-item"><a class="nav-link" href="/procedures/cataract-surgery.html">Catracat
+                                            surgery</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="/procedures/glaucoma-and-trabeculectomy.html">Glaucoma
+                                            surgery</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="#">Migraine Botox injection</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="/procedures/cosmetic-eyelid-surgeries">Eyelid surgeries</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/procedures/lasik.html">LASIK surgery</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <h5>
+                                    MEDICAL CONDITIONS
+                                </h5>
+                                <ul class="nav-menu list-unstyled">
+                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/glaucoma.html">Glaucoma</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/cataract.html">Cataract</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Macula
+                                            Degeneration</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/diabetic-retinopathy.html">Diabetic
+                                            Retinopathy</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/blepharitis.html">Droopy
+                                            Eyelids</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="/eye-conditions-pages/blepharitis.html">Blepharitis</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/dry-eye.html">Dry eyes</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 col-lg-3">
+                                <h5>
+                                    CONTACT US
+                                </h5>
+                                <div class="footer-contact">
+                                    <p>Level 1, 82 Elizabeth St, Sydney NSW 2000</p>
+                                    <p>info@sydneycbd.com.au</p>
+                                    <p> 02 9233 6688</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                        <p>Copyright © 2020 Sydney CBD Eye Clinic. All rights reserved.</p>
+                    </div>
+                        </div>  
+                        
+        </footer>
   `,
 });
 var app = new Vue({
