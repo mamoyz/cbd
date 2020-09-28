@@ -123,7 +123,7 @@ Vue.component("footer-dynamic", {
             <div class="container-fluid px-lg-5">
                 <div class="row">
                     <div class="col-lg-3">
-                        <a href="#"><img class="footer-logo" src="../images/footer-logo.svg" alt=""></a> 
+                        <a href="/"><img class="footer-logo" src="../images/footer-logo.svg" alt=""></a> 
                         <p class="mt-3  pr-4">Sydney CBD Eye clinic was founded by Dr Dennis Lowe – an experienced Ophthalmic surgeon and neurologist with a vision to provide access to exceptional eye care with a holistic approach.
                         </p>                   
                     </div>
@@ -217,7 +217,7 @@ Vue.component("footer-dynamic", {
                                 <div class="footer-contact">
                                     <p>Level 1, 82 Elizabeth St, Sydney NSW 2000</p>
                                     <p>info@sydneycbd.com.au</p>
-                                    <p> 02 9233 6688</p>
+                                    <p><a href="tel:0292336688"> 02 9233 6688</a></p>
                                 </div>
                             </div>
                         </div>
@@ -268,73 +268,92 @@ $(document).ready(function () {
     }
   );
   if (isMobile) {
-    $(".doctors-slider .slider-item")
-      .eq(activeSlide - 1)
-      .addClass("active");
+    // $(".doctors-slider").append($(".doctors-slider").html());
 
-    $.each($(".doctors-slider .slider-item"), function (index) {
-      let offset = index - centerSlide + 1;
-      // console.log(offset);
-      if (offset < 0) {
-        $(this).css({
-          transform: "translateX(-100px) scale(0.8)",
-          "transform-origin": "left",
-        });
-      }
-      if (offset > 0) {
-        $(this).css({
-          transform: "translateX(100px) scale(0.8)",
-          "transform-origin": "right",
-        });
-      }
-    });
+    rebuildSlides(activeSlide, sliderItems);
+    // $(".doctors-slider .slider-item")
+    //   .eq(activeSlide - 1)
+    //   .addClass("active");
+    // $.each($(".doctors-slider .slider-item"), function (index) {
+    //   let offset = index - centerSlide + 1;
+    //   // console.log(offset);
+    //   if (offset < 0) {
+    //     $(this).css({
+    //       transform: "translateX(-150px) scale(0.8)",
+    //       "transform-origin": "left",
+    //     });
+    //   }
+    //   if (offset > 0) {
+    //     $(this).css({
+    //       transform: "translateX(150px) scale(0.8)",
+    //       "transform-origin": "right",
+    //     });
+    //   }
+    // });
   }
 
   $(".slider-next").click(function (e) {
     e.preventDefault();
-    let activeSlideIndex = $(".doctors-slider .slider-item.active").index();
-    if (sliderItems - activeSlideIndex == 1) return false;
-    $(".doctors-slider .slider-item")
-      .eq(activeSlideIndex)
-      .css({
-        transform: "translateX(-100px) scale(0.8)",
-        "transform-origin": "left",
-        opacity: "0",
-      })
-      .removeClass("active");
-    $(".doctors-slider .slider-item")
-      .eq(activeSlideIndex + 1)
-      .css({
-        transform: "translateX(0) scale(1)",
-        "transform-origin": "center",
-        opacity: "1",
-        "z-index": 25,
-      })
-      .addClass("active");
+    if (sliderItems == activeSlide + 1) return false;
+
+    activeSlide++;
+    rebuildSlides(activeSlide, sliderItems);
+
+    // console.log(activeSlideIndex);
+
+    // $(".doctors-slider .slider-item")
+    //   .eq(activeSlideIndex)
+    //   .removeClass("active");
+    // $(".doctors-slider .slider-item:lt(" + activeSlideIndex + ")").css({
+    //   transform: "translateX(-150px) scale(0.8)",
+    //   "transform-origin": "left",
+    //   opacity: "0.3",
+    // });
+    // $(".doctors-slider .slider-item:gt(" + activeSlideIndex + ")").css({
+    //   transform: "translateX(150px) scale(0.8)",
+    //   "transform-origin": "right",
+    //   opacity: "0.3",
+    // });
+    // $(".doctors-slider .slider-item")
+    //   .eq(activeSlideIndex + 1)
+    //   .css({
+    //     transform: "translateX(0) scale(1)",
+    //     "transform-origin": "center",
+    //     opacity: "1",
+    //   })
+    //   .addClass("active");
   });
   $(".slider-prev").click(function (e) {
     e.preventDefault();
-    let activeSlideIndex = $(".doctors-slider .slider-item.active").index();
+    if (0 == activeSlide) return false;
 
-    if (sliderItems - activeSlideIndex == sliderItems) return false;
+    activeSlide--;
+    rebuildSlides(activeSlide, sliderItems);
 
-    $(".doctors-slider .slider-item")
-      .eq(activeSlideIndex)
-      .css({
-        transform: "translateX(100px) scale(0.8)",
-        "transform-origin": "right",
-        opacity: "0",
-      })
-      .removeClass("active");
-    $(".doctors-slider .slider-item")
-      .eq(activeSlideIndex - 1)
-      .css({
-        transform: "translateX(0) scale(1)",
-        "transform-origin": "center",
-        opacity: "1",
-        "z-index": 25,
-      })
-      .addClass("active");
+    // if (sliderItems - activeSlideIndex == sliderItems) return false;
+
+    // $(".doctors-slider .slider-item")
+    //   .eq(activeSlideIndex)
+    //   .removeClass("active");
+    // $(".doctors-slider .slider-item:lt(" + activeSlideIndex + ")").css({
+    //   transform: "translateX(-150px) scale(0.8)",
+    //   "transform-origin": "left",
+    //   opacity: "0.3",
+    // });
+    // $(".doctors-slider .slider-item:gt(" + activeSlideIndex + ")").css({
+    //   transform: "translateX(150px) scale(0.8)",
+    //   "transform-origin": "right",
+    //   opacity: "0.3",
+    // });
+
+    // $(".doctors-slider .slider-item")
+    //   .eq(activeSlideIndex - 1)
+    //   .css({
+    //     transform: "translateX(0) scale(1)",
+    //     "transform-origin": "center",
+    //     opacity: "1",
+    //   })
+    //   .addClass("active");
   });
 
   $(window).on("scroll", function () {
@@ -346,4 +365,43 @@ $(document).ready(function () {
       }
     }
   });
+
+  function rebuildSlides(center, sliderItems) {
+    console.log(center, sliderItems);
+    $(".doctors-slider .slider-item").removeClass("active");
+    setTimeout(() => {
+      $(".doctors-slider .slider-item").eq(center).addClass("active");
+    }, 200);
+    for (let index = center; index > -1; index--) {
+      $(".doctors-slider .slider-item")
+        .eq(index)
+        .css({
+          transform:
+            "translateX(" +
+            (center - index) * 8 * -1 +
+            "%) scale(" +
+            (1 - 0.1 * (center - index)) +
+            ")",
+          opacity: 1 - 0.15 * (center - index),
+          "transform-origin": "left",
+          "z-index": 50 - (center - index),
+        });
+    }
+    for (let index = center + 1; index < sliderItems; index++) {
+      $(".doctors-slider .slider-item")
+        .eq(index)
+        .css({
+          transform:
+            "translateX(" +
+            (index - center) * 8 +
+            "%) scale(" +
+            (1 - 0.1 * (index - center)) +
+            ")",
+          opacity: 1 - 0.15 * (index - center),
+
+          "transform-origin": "right",
+          "z-index": 50 - (index - center),
+        });
+    }
+  }
 });
