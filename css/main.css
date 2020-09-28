@@ -1255,6 +1255,13 @@ footer .nav-menu .nav-item .nav-link {
   padding-bottom: 100px;
 }
 
+.page-header.condition-header {
+  background: url("../images/conditions-min.jpg") no-repeat !important;
+  padding-top: 300px !important;
+  background-position: bottom !important;
+  background-size: cover !important;
+}
+
 @media (max-width: 767px) {
   .page-header {
     padding-top: 150px;
@@ -2411,7 +2418,7 @@ footer .nav-menu .nav-item .nav-link {
 
 .contact p {
   margin-bottom: 0;
-  font: 400 16px/28px 'Lato';
+  font: 400 16px/28px "Lato";
 }
 
 .contact h3 {
@@ -2452,6 +2459,7 @@ footer .nav-menu .nav-item .nav-link {
 .contact-map {
   border-radius: 8px;
   overflow: hidden;
+  background: #fff;
 }
 
 .contact-map iframe {
@@ -2471,7 +2479,7 @@ footer .nav-menu .nav-item .nav-link {
     padding-bottom: 2.6vw;
   }
   .contact p {
-    font: 400 0.83vw/1.46vw 'Lato';
+    font: 400 0.83vw/1.46vw "Lato";
   }
   .contact h3 {
     font: 400 1.15vw/1.88vw "Averta-Semibold";

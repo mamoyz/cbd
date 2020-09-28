@@ -981,6 +981,12 @@ footer {
   padding-top: 200px;
   background: $light-blue;
   padding-bottom: 100px;
+  &.condition-header {
+    background: url("../images/conditions-min.jpg") no-repeat !important;
+    padding-top: 300px !important;
+    background-position: bottom !important;
+    background-size: cover !important;
+  }
   @include mobile {
     padding-top: 150px;
     padding-bottom: 50px;
