@@ -753,9 +753,15 @@ $dark-blue: #015bea;
       width: 100%;
       margin-bottom: 50px;
       text-align: center;
+      &.clone {
+        display: none;
+      }
     }
     @include mobile {
       padding: 40px 10px;
+      &.clone {
+        display: none;
+      }
     }
     &.active {
       opacity: 1;
