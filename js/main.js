@@ -85,7 +85,7 @@ Vue.component("nav-bar", {
                                 <a class="nav-link" href="/eye-conditions.html">Eye Conditions</a>
                             </li>
                             <li class="nav-item has-children ">
-                                <a class="nav-link active" href="/procedures" id="navbarDropdownMenuLink" aria-haspopup="
+                                <a class="nav-link active" href="/procedures/" id="navbarDropdownMenuLink" aria-haspopup="
                                                 true" aria-expanded="false">
                                     <span>Procedures</span> <svg version="1.1" id="Capa_1"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -192,19 +192,19 @@ Vue.component("footer-dynamic", {
                                     MEDICAL CONDITIONS
                                 </h5>
                                 <ul class="nav-menu list-unstyled">
-                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/glaucoma.html">Glaucoma</a>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-condition/glaucoma.html">Glaucoma</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/cataract.html">Cataract</a>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-condition/cataract.html">Cataract</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#">Macula
                                             Degeneration</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/diabetic-retinopathy.html">Diabetic
+                                    <li class="nav-item"><a class="nav-link" href="/eye-condition/diabetic-retinopathy.html">Diabetic
                                             Retinopathy</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/blepharitis.html">Droopy
+                                    <li class="nav-item"><a class="nav-link" href="/eye-condition/blepharitis.html">Droopy
                                             Eyelids</a></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="/eye-conditions-pages/blepharitis.html">Blepharitis</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="/eye-conditions-pages/dry-eye.html">Dry eyes</a>
+                                            href="/eye-condition/blepharitis.html">Blepharitis</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/eye-condition/dry-eye.html">Dry eyes</a>
                                     </li>
 
                                 </ul>
@@ -248,6 +248,9 @@ $(document).ready(function () {
   });
   wow.init();
 
+  $('.header .nav-item a[href="' + window.location.pathname + '"]')
+    .closest("li")
+    .addClass("active");
   $(".conditions-treated .condition-item").hover(
     function () {
       $(
