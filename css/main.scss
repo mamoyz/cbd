@@ -767,7 +767,6 @@ $dark-blue: #015bea;
       opacity: 1;
       .doctor-img,
       .doctor-info {
-        opacity: 1;
         transform: translateY(0);
       }
     }
@@ -776,7 +775,7 @@ $dark-blue: #015bea;
       top: -100px;
       margin-bottom: -100px;
       transform: translateY(100px);
-      transition: all 0.3s;
+      transition: transform 0.3s;
       @include mobile {
         opacity: 1;
       }

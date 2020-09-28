@@ -273,9 +273,9 @@ body { font-family: "Lato"; }
 
 .doctors-slider .slider-item.active { opacity: 1; }
 
-.doctors-slider .slider-item.active .doctor-img, .doctors-slider .slider-item.active .doctor-info { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+.doctors-slider .slider-item.active .doctor-img, .doctors-slider .slider-item.active .doctor-info { -webkit-transform: translateY(0); transform: translateY(0); }
 
-.doctors-slider .slider-item .doctor-img { position: relative; top: -100px; margin-bottom: -100px; -webkit-transform: translateY(100px); transform: translateY(100px); -webkit-transition: all 0.3s; transition: all 0.3s; }
+.doctors-slider .slider-item .doctor-img { position: relative; top: -100px; margin-bottom: -100px; -webkit-transform: translateY(100px); transform: translateY(100px); -webkit-transition: -webkit-transform 0.3s; transition: -webkit-transform 0.3s; transition: transform 0.3s; transition: transform 0.3s, -webkit-transform 0.3s; }
 
 @media (max-width: 767px) { .doctors-slider .slider-item .doctor-img { opacity: 1; } }
 

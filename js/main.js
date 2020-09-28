@@ -268,28 +268,7 @@ $(document).ready(function () {
     }
   );
   if (isMobile) {
-    // $(".doctors-slider").append($(".doctors-slider").html());
-
     rebuildSlides(activeSlide, sliderItems);
-    // $(".doctors-slider .slider-item")
-    //   .eq(activeSlide - 1)
-    //   .addClass("active");
-    // $.each($(".doctors-slider .slider-item"), function (index) {
-    //   let offset = index - centerSlide + 1;
-    //   // console.log(offset);
-    //   if (offset < 0) {
-    //     $(this).css({
-    //       transform: "translateX(-150px) scale(0.8)",
-    //       "transform-origin": "left",
-    //     });
-    //   }
-    //   if (offset > 0) {
-    //     $(this).css({
-    //       transform: "translateX(150px) scale(0.8)",
-    //       "transform-origin": "right",
-    //     });
-    //   }
-    // });
   }
 
   $(".slider-next").click(function (e) {
@@ -298,30 +277,6 @@ $(document).ready(function () {
 
     activeSlide++;
     rebuildSlides(activeSlide, sliderItems);
-
-    // console.log(activeSlideIndex);
-
-    // $(".doctors-slider .slider-item")
-    //   .eq(activeSlideIndex)
-    //   .removeClass("active");
-    // $(".doctors-slider .slider-item:lt(" + activeSlideIndex + ")").css({
-    //   transform: "translateX(-150px) scale(0.8)",
-    //   "transform-origin": "left",
-    //   opacity: "0.3",
-    // });
-    // $(".doctors-slider .slider-item:gt(" + activeSlideIndex + ")").css({
-    //   transform: "translateX(150px) scale(0.8)",
-    //   "transform-origin": "right",
-    //   opacity: "0.3",
-    // });
-    // $(".doctors-slider .slider-item")
-    //   .eq(activeSlideIndex + 1)
-    //   .css({
-    //     transform: "translateX(0) scale(1)",
-    //     "transform-origin": "center",
-    //     opacity: "1",
-    //   })
-    //   .addClass("active");
   });
   $(".slider-prev").click(function (e) {
     e.preventDefault();
@@ -329,31 +284,6 @@ $(document).ready(function () {
 
     activeSlide--;
     rebuildSlides(activeSlide, sliderItems);
-
-    // if (sliderItems - activeSlideIndex == sliderItems) return false;
-
-    // $(".doctors-slider .slider-item")
-    //   .eq(activeSlideIndex)
-    //   .removeClass("active");
-    // $(".doctors-slider .slider-item:lt(" + activeSlideIndex + ")").css({
-    //   transform: "translateX(-150px) scale(0.8)",
-    //   "transform-origin": "left",
-    //   opacity: "0.3",
-    // });
-    // $(".doctors-slider .slider-item:gt(" + activeSlideIndex + ")").css({
-    //   transform: "translateX(150px) scale(0.8)",
-    //   "transform-origin": "right",
-    //   opacity: "0.3",
-    // });
-
-    // $(".doctors-slider .slider-item")
-    //   .eq(activeSlideIndex - 1)
-    //   .css({
-    //     transform: "translateX(0) scale(1)",
-    //     "transform-origin": "center",
-    //     opacity: "1",
-    //   })
-    //   .addClass("active");
   });
 
   $(window).on("scroll", function () {
@@ -371,21 +301,29 @@ $(document).ready(function () {
     $(".doctors-slider .slider-item").removeClass("active");
     setTimeout(() => {
       $(".doctors-slider .slider-item").eq(center).addClass("active");
-    }, 200);
+    }, 50);
     for (let index = center; index > -1; index--) {
       $(".doctors-slider .slider-item")
         .eq(index)
         .css({
           transform:
             "translateX(" +
-            (center - index) * 8 * -1 +
+            (center - index) * 10 * -1 +
             "%) scale(" +
-            (1 - 0.1 * (center - index)) +
+            (1 - 0.2 * (center - index)) +
             ")",
           opacity: 1 - 0.15 * (center - index),
           "transform-origin": "left",
           "z-index": 50 - (center - index),
         });
+      $(".doctors-slider .slider-item")
+        .eq(index)
+        .find(".doctor-img")
+        .css({ opacity: 1 - 0.3 * (center - index) });
+      $(".doctors-slider .slider-item")
+        .eq(index)
+        .find(".doctor-info")
+        .css({ opacity: 1 - 0.3 * (center - index) });
     }
     for (let index = center + 1; index < sliderItems; index++) {
       $(".doctors-slider .slider-item")
@@ -393,15 +331,23 @@ $(document).ready(function () {
         .css({
           transform:
             "translateX(" +
-            (index - center) * 8 +
+            (index - center) * 10 +
             "%) scale(" +
-            (1 - 0.1 * (index - center)) +
+            (1 - 0.2 * (index - center)) +
             ")",
           opacity: 1 - 0.15 * (index - center),
 
           "transform-origin": "right",
           "z-index": 50 - (index - center),
         });
+      $(".doctors-slider .slider-item")
+        .eq(index)
+        .find(".doctor-img")
+        .css({ opacity: 1 - 0.3 * (index - center) });
+      $(".doctors-slider .slider-item")
+        .eq(index)
+        .find(".doctor-info")
+        .css({ opacity: 1 - 0.3 * (index - center) });
     }
   }
 });
